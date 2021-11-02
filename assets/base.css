@@ -1864,8 +1864,19 @@ input[type='checkbox'] {
 
 @media screen and (min-width: 990px) {
   .header {
-    padding-top: 2rem;
-    padding-bottom: 2rem;
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+
+  .header-wrapper:before{
+    position: absolute;
+    content: "";
+    height: 2px;
+    width: 100%;
+    top: 50%;
+    left: 0;
+    background-color: #00c2cb;
+    z-index: 1;
   }
 
   .header--has-menu:not(.header--middle-left) {
@@ -1881,9 +1892,10 @@ input[type='checkbox'] {
   }
 
   .header--middle-left {
-    grid-template-areas: 'heading navigation icons';
-    grid-template-columns: auto auto 1fr;
+    grid-template-areas: 'navigation heading icons';
+    grid-template-columns: auto;
     column-gap: 2rem;
+    padding: 5px 40px;
   }
 
   .header--top-center {
@@ -1904,6 +1916,7 @@ input[type='checkbox'] {
 .header__heading {
   margin: 0;
   line-height: 0;
+  padding: 0;
 }
 
 .header > .header__heading-link {
@@ -1914,6 +1927,8 @@ input[type='checkbox'] {
 .header__heading-link {
   grid-area: heading;
   justify-self: center;
+  background-color: white;
+  z-index: 10;
 }
 
 .header__heading-link {
@@ -1933,7 +1948,7 @@ input[type='checkbox'] {
 }
 
 .header__heading-logo {
-  height: auto;
+  height: 80%;
   width: 100%;
 }
 
@@ -2008,6 +2023,8 @@ input[type='checkbox'] {
 .header__icon--cart {
   position: relative;
   margin-right: -1.2rem;
+  background-color: white;
+  z-index: 10;
 }
 
 @media screen and (max-width: 989px) {
@@ -2033,6 +2050,8 @@ menu-drawer + .header__search {
 .header__search {
   display: inline-flex;
   line-height: 0;
+  background-color: white;
+  z-index: 10;
 }
 
 .header--top-center > .header__search {
@@ -2210,21 +2229,21 @@ details[open] > .header__icon--menu .icon-hamburger {
   transition: text-decoration var(--duration-short) ease;
 }
 
-.header__menu-item:hover span {
-  text-decoration: underline;
-  text-underline-offset: 0.3rem;
+/*
+.header__menu-item:before{
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 0;
+  height: 2px;
+  background: rgb(var(color-foreground));
+  transition: 0.3s;
 }
 
-.header__active-menu-item {
-  transition: text-decoration-thickness var(--duration-short) ease;
-  color: rgb(var(--color-foreground));
-  text-decoration: underline;
-  text-underline-offset: 0.3rem;
+.header__menu-item:hover:before{
+  width: 100%;
 }
-
-.header__menu-item:hover .header__active-menu-item {
-  text-decoration-thickness: 0.2rem;
-}
+*/
 
 .header__submenu {
   transition: opacity var(--duration-default) ease,

@@ -1,0 +1,44 @@
+{{ 'section-vda-banner.css' | asset_url | stylesheet_tag }}
+
+<div class="vda-banner">
+                                   
+    <img class="vda-banner__swirl" src="{{ 'Header.svg' | asset_url }}"/>
+  
+
+    <div class="banner-content">
+        <h1 class="vda-banner__header">{{ section.settings.title }}</h1>
+        <h2 class="vda-banner__text">{{ section.settings.text }}</h2>
+    </div>  
+    {% comment %}
+      <div class="vda-banner__mascot" style="background-image: url({{ 'Mascot.png' | asset_img_url | url: 'medium'}})"></div>
+    {% endcomment %}
+
+    <div class="vda-banner__mascot"> <img src="{{ 'Mascot.png' | asset_img_url }}"/> </div>  
+    
+</div>
+
+ 
+
+{% schema %}
+  {
+    "name": "VDA Banner",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Heading",
+        "default": "Van Doge Art"
+      },
+      {
+        "type": "richtext",
+        "id": "text",
+        "label": "Text",
+        "default": "<p>default</p>"
+      }
+    ],
+    "presets": [{
+        "name": "VDA Banner",
+        "category": "Text"
+    }]
+  }
+{% endschema %}

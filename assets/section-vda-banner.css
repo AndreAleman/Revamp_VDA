@@ -1,0 +1,37 @@
+
+ .vda-banner{
+    display: grid;
+    flex-direction: column;
+    position: relative;
+ }
+
+.vda-banner__swirl{
+    margin-right: 1px;
+    position: absolute;
+}
+
+
+.vda-banner__header{
+    width: 75%;
+    position: absolute;
+    margin-top: 2px;
+    margin-left: 10px;
+    color: whitesmoke;
+}
+
+.vda-banner__text{
+    width: 85%;
+    position: absolute;
+    margin-left: 1px;
+    padding: 1rem;
+    color: whitesmoke;
+}
+
+
+/*
+.vda-banner{
+    position: relative;
+    text-align: left;
+}
+*/
+
