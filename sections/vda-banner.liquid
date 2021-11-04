@@ -1,13 +1,15 @@
 {{ 'section-vda-banner.css' | asset_url | stylesheet_tag }}
 
-<div class="vda-banner">
-                                   
-    <img class="vda-banner__swirl" src="{{ 'Header.svg' | asset_url }}"/>
+<div class="vda-banner__ctn">
+     
   
+  {% comment %}
+    <img class="vda-banner__swirl" src="{{ 'Header.svg' | asset_url }}"/>
+  {% endcomment %}
 
     <div class="vda-banner__content">
-        <h1 class="vda-banner__header">{{ section.settings.title }}</h1>
-        <h2 class="vda-banner__text">{{ section.settings.text }}</h2>
+        <h1>{{ section.settings.title }}</h1>
+        <h2>{{ section.settings.text }}</h2>
     </div>  
 
     <div class="vda-banner__mascot"> <img src="{{ 'van-doge-logo.png' | asset_img_url }}"/> </div>  

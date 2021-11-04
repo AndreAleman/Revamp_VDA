@@ -1,5 +1,23 @@
- 
- 
+ .vda-banner__ctn{
+    position: relative;
+    height: 350px;
+    width: 100%;
+    margin: 1px;
+    padding: 1px;
+    z-index: -20;
+    
+    background-image: url('./Header.svg');
+    background-position-y: top;
+    background-repeat: no-repeat;
+    background-size: inherit 70% 50%;
+}
+
+.vda-banner__mascot{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
 
 
 
@@ -21,8 +39,6 @@
     
  }
 
-*/
-
 
 *{
     box-sizing: border-box;
@@ -37,14 +53,12 @@
     position: relative;
     grid-gap: 0;
     height: 200px;
-
-    /* I wasn't sure if using a background image was a better option
+ I wasn't sure if using a background image was a better option
     
     background-image: url('./Header.svg');
     background-size: cover;
     background-attachment: fixed;
     
-    */
 
     display: flex;
     flex-direction: column;
@@ -77,7 +91,7 @@ color: black;
 
 
 
-/* 
+
 .vda-banner{
     position: relative;
 }
